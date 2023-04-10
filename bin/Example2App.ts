@@ -14,4 +14,5 @@ const persistence = new PersistenceStack(app, 'PersistenceStack', {
 const graphQl = new GraphQlStack(app, 'GraphQlStack', {
   stackName: "GraphQl",
   env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
+  table: persistence.table,
 });

@@ -14,7 +14,7 @@ export const handler: Handler<HelloEvent, string> = async (event) => {
   let nickname = event.name;
 
   const response = await dynamoDb.get({
-    TableName: "example-1",
+    TableName: "example-2",
     Key: {
       name: event.name
     }
