@@ -29,7 +29,7 @@ export class GraphQlStack extends cdk.Stack {
         timeout: cdk.Duration.seconds(10),
       });
 
-      props.table.grantWriteData(myLambda);
+      props.table.grantReadData(myLambda);
     
       const dataSource = graphQlApi.addLambdaDataSource("example_2_datasource", myLambda);
 
