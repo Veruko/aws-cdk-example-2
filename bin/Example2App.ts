@@ -7,12 +7,12 @@ import { GraphQlStack } from '../lib/GraphQlStack';
 const app = new cdk.App();
 
 const persistence = new PersistenceStack(app, 'PersistenceStack', {
-  stackName: "Persistence",
+  stackName: "Example2Persistence",
   env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
 });
 
 const graphQl = new GraphQlStack(app, 'GraphQlStack', {
-  stackName: "GraphQl",
+  stackName: "Example2GraphQl",
   env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
   table: persistence.table,
 });
